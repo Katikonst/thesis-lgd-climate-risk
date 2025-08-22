@@ -227,6 +227,7 @@ properties['Flood_Risk'] = calculate_flood_risk(
 properties['Flood_Damage'] = properties['Flood_Risk'] * properties['res_price']
 
 # Save the updated dataset
-properties.to_csv("C:/Users/katid_7ngm4sv/OneDrive/Desktop/augmscrip/updated_dataset_with_flood.csv", index=False)
+properties.to_csv("path/to/properties_with_all_risks.csv", index=False)
 
 print("Updated dataset with flood risk (normalized) and damage (as price) saved.")
+

@@ -6,7 +6,7 @@ import seaborn as sns
 # Set seaborn style for clarity
 sns.set(style="whitegrid", context="talk")
 
-results_folder = r"C:\Users\katid_7ngm4sv\OneDrive\Desktop\Model results"
+results_folder = r"path/to/Model results"
 scenarios = ["Baseline", "High Flood Risk", "High Wildfire Risk", "High Earthquake Risk", "Flood + Wildfire"]
 years = range(2025, 2051)
 
@@ -33,7 +33,7 @@ for scenario in scenarios:
 
     regional_summary = pd.read_csv(regional_file)
     
-    # Standardize region names to uppercase for consistency
+  
     if "location_region" in regional_summary.columns:
         regional_summary["location_region"] = regional_summary["location_region"].str.upper()
 
@@ -193,3 +193,4 @@ for scenario in scenarios:
         print(f"'adj_Earthquake_Risk' column not found in {scenario} regional data.")
 
 print("All regional graphs saved successfully.")
+

@@ -3,8 +3,8 @@ import numpy as np
 from geopy.distance import distance
 
 # Load datasets
-properties = pd.read_csv("C:/Users/katid_7ngm4sv/OneDrive/Desktop/updated_dataset.csv")  
-earthquakes = pd.read_csv("C:/Users/katid_7ngm4sv/OneDrive/Desktop/earthquake/Earthquakes_v3.csv")
+properties = pd.read_csv("path/to/updated_dataset.csv")  
+earthquakes = pd.read_csv("path/to/Earthquakes_v3.csv")
 
 # Rename earthquake columns
 earthquakes.rename(columns={"DATETIME": "Datetime", "LAT": "Earthquake_LAT", "LONG": "Earthquake_LONG", 
@@ -87,3 +87,4 @@ properties.drop(columns=['earthquake_risk', 'earthquake_damage'], inplace=True, 
 # Save the updated dataset
 properties.to_csv('updated_properties_with_earthquake_risk.csv', index=False)
 print("Earthquake risk calculation completed in batches. Updated dataset saved.")
+

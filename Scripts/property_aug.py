@@ -164,7 +164,8 @@ combined_df = combined_df.drop(columns=['status', 'deleted', 'deleted_at'], erro
 print(f"Columns after dropping: {combined_df.columns.tolist()}")
 
 # Save the combined dataset
-combined_df.to_csv(r'path\to\combined_property_data.csv', index=False)
+combined_df.to_csv(r'path\to\augmented_dataset.csv', index=False)
 
 print("Combined property data with cities, regions, and real data saved successfully.")
+
 

@@ -36,7 +36,7 @@ city_coordinates = {
 }
 
 # Load the dataset
-combined_df = pd.read_csv('C:/Users/katid_7ngm4sv/OneDrive/Desktop/augmented_dataset.csv') 
+combined_df = pd.read_csv('path/to/augmented_dataset.csv') 
 # Step 1: Split the dataset
 real_data = combined_df.iloc[:20000]  # First 20k rows (real data)
 augmented_data = combined_df.iloc[20000:]  # Last 20k rows (augmented data)
@@ -66,3 +66,4 @@ updated_combined_df = pd.concat([real_data, augmented_data], ignore_index=True)
 # Save or inspect the updated dataset
 updated_combined_df.to_csv("updated_dataset.csv", index=False)
 print("Updated dataset saved as 'updated_dataset.csv'")
+

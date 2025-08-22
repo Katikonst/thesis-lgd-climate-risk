@@ -29,7 +29,7 @@ def assign_loan_percentage(data, noise_scale=0.02):
     
     # Add noise to LTV
     data['LTV'] += np.random.normal(0, noise_scale, len(data))
-    data['LTV'] = data['LTV'].clip(lower=0, upper=1)  # Ensure LTV stays within realistic bounds (0% to 100%)
+    data['LTV'] = data['LTV'].clip(lower=0, upper=1)
     return data
 
 # ---------------------------
@@ -42,7 +42,7 @@ def calculate_loan_amount(data, price_column, noise_scale=0.01):
     # Add noise to loan amount
     noise = np.random.normal(0, noise_scale * data[price_column], len(data))
     data['loan_amount'] += noise
-    data['loan_amount'] = data['loan_amount'].clip(lower=0, upper=data[price_column])  # Ensure loan doesn't exceed property price
+    data['loan_amount'] = data['loan_amount'].clip(lower=0, upper=data[price_column]) 
     return data
 
 # ---------------------------
@@ -75,10 +75,9 @@ def process_data(data, price_column='res_price', res_date_column='res_date', con
 # ---------------------------
 # Load Dataset
 # ---------------------------
-file_path = r"C:\Users\katid_7ngm4sv\OneDrive\Desktop\augmscrip\properties_with_all_risks.csv"
+file_path = r"path/to/properties_with_all_risks.csv"
 augmented_data = pd.read_csv(file_path)
 
-# Process the data
 augmented_data = process_data(
     augmented_data,
     price_column='res_price',
@@ -86,8 +85,8 @@ augmented_data = process_data(
     construction_year_column='construction_year'
 )
 
-# Save the updated dataset
-output_path = r"C:\Users\katid_7ngm4sv\OneDrive\Desktop\augmscrip\augmented_properties_with_loans.csv"
+output_path = r"path/to/augmented_properties_with_loans.csv"
 augmented_data.to_csv(output_path, index=False)
 
 print(f"Augmented data saved to: {output_path}")
+

@@ -11,7 +11,7 @@ import xgboost as xgb
 from sklearn.preprocessing import StandardScaler
 import glob
 
-# Set seaborn style for clarity
+
 sns.set(style="whitegrid", context="talk")
 
 results_folder = "Model results"
@@ -158,3 +158,4 @@ for scenario in scenarios_unique_ml:
 print("\nFinal Model Comparison:")
 print(f"Random Forest - Mean CV R^2: {np.mean(rf_cv_scores):.6f}, Test MSE: {rf_mse:.2e}")
 print(f"XGBoost       - Mean CV R^2: {np.mean(xgb_cv_scores):.6f}, Test MSE: {xgb_mse:.2e}")
+

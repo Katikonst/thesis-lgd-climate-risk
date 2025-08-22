@@ -6,13 +6,13 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import warnings
 
-# Set seaborn style for clarity
+
 sns.set(style="whitegrid", context="talk")
 
 #########################################
 # 1. Data Loading and Preparation
 #########################################
-data_path = r"C:\Users\katid_7ngm4sv\OneDrive\Desktop\augmscrip\augmented_properties_with_loans.csv"
+data_path = r"path/to/augmented_properties_with_loans.csv"
 df = pd.read_csv(data_path)
 
 common_columns = [
@@ -65,7 +65,7 @@ growth_std = 0.005
 # Economic shock: adjust property prices each year (mean 0, std 0.02)
 econ_shock_std = 0.02
 
-# Gamma exponent to introduce non-linearity in combined risk (gamma > 1 exaggerates simultaneous risks)
+# Gamma exponent to introduce non-linearity in combined risk
 gamma = 1.3
 
 # Noise standard deviation for risk multipliers
@@ -249,3 +249,4 @@ for scenario_name, params in scenarios.items():
     all_property_samples.append(df_ml_scenario)
     del regional_results, property_sample_list, regional_results_df, regional_summary, df_ml_scenario
     gc.collect()
+

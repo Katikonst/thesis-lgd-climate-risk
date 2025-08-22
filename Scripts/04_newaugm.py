@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 # Load your augmented dataset
-augmented_data = pd.read_csv('C:/Users/katid_7ngm4sv/OneDrive/Desktop/augmscrip/updated_properties_with_earthquake_risk.csv')
+augmented_data = pd.read_csv('path/to/updated_properties_with_earthquake_risk.csv')
 
 # ---------------------------
 # Step 1: Region-Specific Temperature Data+Add Wind and Rain Data
@@ -196,6 +196,7 @@ augmented_data =adjust_rainfall_by_location(augmented_data)
 augmented_data.drop(columns=['storm_risk', 'storm_damage', 'total_damage'], inplace=True)
 
 # Save the updated dataset
-augmented_data.to_csv('C:/Users/katid_7ngm4sv/OneDrive/Desktop/augmented_data_with_updated_risks.csv', index=False)
+augmented_data.to_csv('path/to/augmented_data_with_updated_risks.csv', index=False)
+
 
 print("Final normalized dataset saved as 'C:/Users/katid_7ngm4sv/OneDrive/Desktop/augmented_data_with_updated_risks.csv'")

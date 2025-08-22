@@ -3,8 +3,8 @@ import pandas as pd
 import numpy as np
 import random
 
-# Load the properties dataset
-properties = pd.read_csv("C:/Users/katid_7ngm4sv/OneDrive/Desktop/augmscrip/updated_dataset_with_wildfire.csv")
+
+properties = pd.read_csv("path/to/updated_dataset_with_wildfire.csv")
 
 # Weights for flood risk calculation
 w1 = 0.6  # Weight for Rainfall Frequency
@@ -217,11 +217,8 @@ for region, cities in missing_cities.items():
             properties.loc[properties['location_name'] == city, 'Normalized_Rainfall_Intensity'] = global_fallback['Normalized_Rainfall_Intensity']
 
 
-
-# Drop the existing flood_risk and flood_damage columns
 properties.drop(columns=['flood_risk', 'flood_damage', 'res_address', 'city'], inplace=True, errors='ignore')
 
-# Calculate flood risk (ensure calculate_flood_risk is well-defined)
 properties['Flood_Risk'] = calculate_flood_risk(
     properties['Normalized_Rainfall_Frequency'], properties['Normalized_Rainfall_Intensity']
 )
@@ -231,4 +228,5 @@ properties['Flood_Damage'] = properties['Flood_Risk'] * properties['res_price']
 
 # Save the updated dataset
 properties.to_csv("C:/Users/katid_7ngm4sv/OneDrive/Desktop/augmscrip/updated_dataset_with_flood.csv", index=False)
+
 print("Updated dataset with flood risk (normalized) and damage (as price) saved.")

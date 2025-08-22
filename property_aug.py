@@ -2,9 +2,9 @@ import pandas as pd
 import numpy as np
 
 # Load real property data
-property_data = pd.read_csv(r'C:\Users\katid_7ngm4sv\OneDrive\Desktop\Diplwmatiki-stressed LGD due climate crisis\greece_listings.csv')
-additional_data_1 = pd.read_excel(r'C:\Users\katid_7ngm4sv\OneDrive\Desktop\Diplwmatiki-stressed LGD due climate crisis\A1602_SAM05_TB_DC_00_2021_A03_F_GR.xlsx', skiprows=5)
-additional_data_2 = pd.read_excel(r'C:\Users\katid_7ngm4sv\OneDrive\Desktop\Diplwmatiki-stressed LGD due climate crisis\A1602_SAM05_TB_DC_00_2021_A02_F_GR.xlsx', skiprows=5)
+property_data = pd.read_csv(r'path\to\greece_listings.csv')
+additional_data_1 = pd.read_excel(r'path\to\A1602_SAM05_TB_DC_00_2021_A03_F_GR.xlsx', skiprows=5)
+additional_data_2 = pd.read_excel(r'path\to\A1602_SAM05_TB_DC_00_2021_A02_F_GR.xlsx', skiprows=5)
 
 # Clean and standardize column names for size distributions
 additional_data_1.columns = [f'col_{i}' for i in range(len(additional_data_1.columns))]
@@ -164,6 +164,7 @@ combined_df = combined_df.drop(columns=['status', 'deleted', 'deleted_at'], erro
 print(f"Columns after dropping: {combined_df.columns.tolist()}")
 
 # Save the combined dataset
-combined_df.to_csv(r'C:\Users\katid_7ngm4sv\OneDrive\Desktop\combined_property_data.csv', index=False)
+combined_df.to_csv(r'path\to\combined_property_data.csv', index=False)
 
 print("Combined property data with cities, regions, and real data saved successfully.")
+

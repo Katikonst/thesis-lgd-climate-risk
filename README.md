@@ -1,5 +1,5 @@
 # thesis-lgd-climate-risk
-My thesis consists of Monte Carlo simulation and machine learning (Random Forest, XGBoost) to estimate Loss Given Default (LGD) for Greek mortgage loans under climate and physical risks (flood, fire, earthquake).
+My thesis "Adjustment of Loss Given Default estimation for greek residential mortgage loans in the context of climate and physical risks" consists of Monte Carlo simulation and machine learning (Random Forest, XGBoost) to estimate Loss Given Default (LGD) for Greek mortgage loans under climate and physical risks (flood, fire, earthquake).
 Working on this thesis was both challenging and rewarding.  
 Because climate-adjusted LGD estimation is a new area with very little 
 existing research, there were no ready-made solutions to follow.  

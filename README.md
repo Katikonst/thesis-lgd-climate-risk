@@ -10,5 +10,5 @@ datasets, or how to adapt machine learning models for this purpose.
 
 It took a lot of trial, error, and persistence, but in the end the process 
 helped me grow as an independent problem-solver and led to the proposal of 
-a stress-testing framework that I believe could be useful for Greek banks.
+a stress-testing framework that I believe could open the path to integrate natural risks in Greek banks' portfolios.
 This is my final work for the time being.

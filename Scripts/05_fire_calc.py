@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 
-main_dataset = pd.read_csv("C:/Users/katid_7ngm4sv/OneDrive/Desktop/augmented_data_with_updated_risks.csv")  
+main_dataset = pd.read_csv("path/to/augmented_data_with_updated_risks.csv")  
 
 # Step 1: Define mappings
 nomos_to_city = {
@@ -105,7 +105,7 @@ nomos_to_region = {
 
 
 # Step 2: Load wildfire data
-wildfire_folder = "C:/Users/katid_7ngm4sv/OneDrive/Desktop/wildfire"  
+wildfire_folder = "path/to/wildfire"  
 wildfire_files = [f for f in os.listdir(wildfire_folder) if f.endswith(".xls")]
 
 wildfire_data = pd.DataFrame()
@@ -174,3 +174,4 @@ main_dataset = main_dataset.drop(columns=['heat_wave_risk', 'heatwave_damage'], 
 main_dataset.to_csv("updated_dataset_with_wildfire.csv", index=False)
 
 print("Updated dataset with wildfire risk and damage saved.")
+
